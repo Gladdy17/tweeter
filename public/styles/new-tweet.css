@@ -85,4 +85,7 @@
     color: #666;
     font-weight: bold;
   }
-   
+  
+  .counter.invalid {
+  color: red;
+}
