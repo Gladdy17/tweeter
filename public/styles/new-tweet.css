@@ -1,91 +1,67 @@
- /* optional: set max width for better layout */on horizontally */ /* add space between form elements */e label m: 5px /* aligns button and counter */ /* aligns them vertically */e button  /* twitter-like blue *//* styling the counter */
- /* General styling for the section */
+/* General styling for the new-tweet section */
 .new-tweet {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Title styling */
-  .new-tweet h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-    color: #333;
-  }
-  
-  /* Styling the form itself */
-  .new-tweet form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  /* Label styling */
-  .new-tweet label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  /* Textarea styling */
-  .new-tweet textarea {
-    width: 100%;
-    height: 100px;
-    font-size: 14px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    resize: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  /* Add a focus effect to the textarea */
-  .new-tweet textarea:focus {
-    border-color: #1da1f2;
-    outline: none;
-    box-shadow: 0 0 5px rgba(29, 161, 242, 0.5);
-  }
-  
-  /* Styling the form actions (button + counter) */
-  .form-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Button styling */
-  .new-tweet button {
-    font-size: 14px;
-    padding: 10px 20px;
-    background-color: #4056A1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Button hover effect */
-  .new-tweet button:hover {
-    background-color: #0d95e8;
-  }
-  
-  /* Counter styling */
-  .new-tweet .counter {
-    font-size: 14px;
-    color: #666;
-    font-weight: bold;
-  }
-  
-  .counter.invalid {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Form element styling */
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-tweet textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.new-tweet textarea::placeholder {
+  color: #aaa;
+}
+
+/* Form actions (button and counter) */
+.new-tweet .form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-tweet button {
+  padding: 8px 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #1da1f2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.new-tweet button:hover {
+  background-color: #0c90d6;
+}
+
+.new-tweet .counter {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Styling for a warning state when counter is negative */
+.new-tweet .counter.negative {
   color: red;
 }
