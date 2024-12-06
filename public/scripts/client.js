@@ -60,18 +60,32 @@ $(document).ready(function () {
     });
   };
 
-  // Form submission event handler
+  // Form submission event handler with validation
   $("form").on("submit", function (event) {
     event.preventDefault(); // Prevent default form submission behavior
 
-    const formData = $(this).serialize(); // Serialize form data
+    const $textarea = $(this).find("textarea");
+    const tweetContent = $textarea.val().trim();
 
-    // Send serialized data to the server
+    // Validation: Check for empty tweet
+    if (!tweetContent) {
+      alert("Error: Tweet content cannot be empty!");
+      return; // Stop form submission
+    }
+
+    // Validation: Check for tweet exceeding character limit
+    if (tweetContent.length > 140) {
+      alert("Error: Tweet content exceeds 140 characters!");
+      return; // Stop form submission
+    }
+
+    // Serialize form data and send it to the server
+    const formData = $(this).serialize();
     $.post("/tweets", formData)
       .done(() => {
         // Clear the form input and reload tweets after successful submission
-        $(this).find("textarea").val("");
-        loadTweets();
+        $textarea.val(""); // Clear the textarea
+        loadTweets(); // Reload tweets
       })
       .fail((err) => console.error("Error submitting tweet:", err));
   });
@@ -79,3 +93,4 @@ $(document).ready(function () {
   // Initial load of tweets
   loadTweets();
 });
+
