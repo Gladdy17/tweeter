@@ -67,15 +67,22 @@ $(document).ready(function () {
     const $textarea = $(this).find("textarea");
     const tweetContent = $textarea.val().trim();
 
+    // Hide the error message element before validation
+    $(".error-message").slideUp();
+
     // Validation: Check for empty tweet
     if (!tweetContent) {
-      alert("Error: Tweet content cannot be empty!");
+      $(".error-message")
+        .text("🚫 Error: Tweet content cannot be empty!")
+        .slideDown();
       return; // Stop form submission
     }
 
     // Validation: Check for tweet exceeding character limit
     if (tweetContent.length > 140) {
-      alert("Error: Tweet content exceeds 140 characters!");
+      $(".error-message")
+        .text("🚫 Error: Tweet content exceeds 140 characters!")
+        .slideDown();
       return; // Stop form submission
     }
 
@@ -93,4 +100,5 @@ $(document).ready(function () {
   // Initial load of tweets
   loadTweets();
 });
+
 

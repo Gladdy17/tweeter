@@ -65,3 +65,15 @@
 .new-tweet .counter.negative {
   color: red;
 }
+.error-message {
+  display: none; /* Initially hidden */
+  color: white;
+  //background-color: #fffff; /* Red background for errors */
+  border: 1px solid #ff0000; /* Stronger border for emphasis */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
