@@ -40,6 +40,27 @@ nav span {
 }
 
 .nav-action i {
-  font-size: 12px;
-  color: red; /* Ensures the downward chevron icon matches the design */
+  font-size: 18px; /* Adjusted to better match the text */
+  color: red; /* Matches the design */
+  transition: color 0.3s;
+}
+
+.nav-action i:hover {
+  color: #FFD700; /* Adds a hover effect for the icon as well */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  nav {
+    height: 90px;
+    padding: 0 1em;
+  }
+
+  nav span {
+    font-size: 18px;
+  }
+
+  .nav-action span {
+    font-size: 14px;
+  }
 }

@@ -55,6 +55,11 @@
   background-color: #0c90d6;
 }
 
+.new-tweet .counter.invalid {
+  color: red;
+}
+
+
 .new-tweet .counter {
   font-size: 14px;
   color: #333;

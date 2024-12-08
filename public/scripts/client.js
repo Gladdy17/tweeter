@@ -90,8 +90,11 @@ $(document).ready(function () {
     const formData = $(this).serialize();
     $.post("/tweets", formData)
       .done(() => {
-        // Clear the form input and reload tweets after successful submission
+        // Clear the form input and reset the counter after successful submission
         $textarea.val(""); // Clear the textarea
+        const $counter = $(this).find(".counter");
+        $counter.text(140).removeClass("negative"); // Reset counter to 140 and remove red color
+
         loadTweets(); // Reload tweets
       })
       .fail((err) => console.error("Error submitting tweet:", err));
@@ -100,5 +103,6 @@ $(document).ready(function () {
   // Initial load of tweets
   loadTweets();
 });
+
 
 
