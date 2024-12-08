@@ -23,8 +23,16 @@ nav span {
 
 .nav-action {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column; /* Stack text and icon vertically */
+  align-items: center; /* Center align both text and icon */
+  justify-content: center;
+  gap: 5px; /* Spacing between the text and icon */
+  color: white;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .nav-action span {
