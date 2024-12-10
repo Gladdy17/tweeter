@@ -25,3 +25,42 @@ header h2 {
   margin: 10px 0 0 0;
   font-family: 'Source Sans 3', sans-serif;
 }
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row; /* Arrange header and tweets side-by-side */
+    justify-content: space-between; /* Space out header and tweets */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between header and tweets */
+  }
+
+  .profile-header {
+    flex: 1; /* Profile header takes up less space */
+    max-width: 300px; /* Ensure the header doesn't stretch too much */
+  }
+
+  .tweets-container {
+    flex: 2; /* Tweets take up more space */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* Stacks header and tweets vertically */
+    align-items: center; /* Center align elements for tablet view */
+    gap: 20px; /* Add spacing between sections */
+  }
+
+  .profile-header {
+    width: 100%; /* Ensure the header spans the full width */
+    text-align: center; /* Center-align content in the profile header */
+  }
+
+  .tweets-container {
+    width: 100%; /* Ensure the tweets container spans the full width */
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+}
+

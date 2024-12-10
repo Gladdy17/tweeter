@@ -20,8 +20,8 @@ nav span {
   font-size: 24px;
   letter-spacing: 2px;
 }
-
 .nav-action {
+
   display: flex;
   flex-direction: column; /* Stack text and icon vertically */
   align-items: center; /* Center align both text and icon */
@@ -35,19 +35,19 @@ nav span {
   transition: color 0.3s;
 }
 
+font-family: 'Source Sans 3', sans-serif;
 .nav-action span {
-  font-family: 'Source Sans 3', sans-serif;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   transition: color 0.3s;
 }
 
-.nav-action span:hover {
-  color: #FFD700; /* Adds a hover effect (gold) for better user interaction */
+color: #FFD700; /* Adds a hover effect (gold) for better user interaction */
 }
 
 .nav-action i {
+  .nav-action span:hover {
   font-size: 18px; /* Adjusted to better match the text */
   color: red; /* Matches the design */
   transition: color 0.3s;
